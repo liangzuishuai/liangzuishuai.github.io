@@ -1,0 +1,110 @@
+.li-box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 100px;
+    border: 1px solid #666;
+    background-color: blueviolet;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background: linear-gradient(to left, black 50%, white 50%);
+    transition: all 1s;
+}
+
+.li-box:hover {
+    transform: all 1s;
+    /* transform: rotate(720deg); */
+    /* transform: rotateX(720deg); */
+    /* transform: rotateY(720deg); */
+    /* 过度 */
+    transition-delay: 1s;
+    /* 延迟 */
+    /* 位移 */
+    /* transform: translate(400px, 200px); */
+    /* transform: translateX(400px, 200px); */
+    /* transform: translateY(400px, 200px); */
+    /* transform: scale(2, 2); */
+    /* transform: scaleX(4); */
+    /* 缩放 */
+    /* transform: scaleY(2); */
+    /* 倾斜 */
+    transform: skew(30deg, 30deg);
+    /* transform: skewX(30deg, 30deg); */
+    /* transform: skewY(30deg, 30deg); */
+}
+
+.white {
+    width: 100px;
+    height: 100px;
+    background: black;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.swhite {
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 50%;
+}
+
+.black {
+    width: 100px;
+    height: 100px;
+    background: white;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.sblack {
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    background-color: black;
+    border-radius: 50%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+}
+
+.box2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background: radial-gradient(red, orange);
+    box-shadow: 0px 0px 20px 20px orange;
+    /* 水平位置 正直偏左 0两边相等 */
+    /* 控制垂直位置  */
+    /* 模糊程度 值越大越模糊*/
+    /* 阴影范围 值越大越模糊*/
+    /* 色值 */
+}
+
+.box3 {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom right, red, blue);
+}
+
+
+/* transform 2D 3D转化  */
+
+
+/* translate 位移 */
+
+
+/* rotate 旋转 */

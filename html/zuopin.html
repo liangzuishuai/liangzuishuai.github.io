@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>作品展示</title>
+    <link rel="stylesheet" href="../js/animate.css">
+    <link rel="shortcut icon" href="https://i03picsos.sogoucdn.com/14bad6fad2494015" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        .li-bg {
+            background: #edecda url(http://www.lijian2015.com/images/cv_header_bg.jpg) no-repeat center top;
+            max-width: 1530px;
+            width: 100%;
+            margin: 0 auto
+        }
+        
+        .li-header {
+            height: 250px;
+            min-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .li-logo {
+            width: 1010px;
+            height: 200px;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .li-nav {
+            background: url(http://www.lijian2015.com/images/cv_logo.png) 0px 4px;
+            background-repeat: no-repeat;
+            background-size: 310px;
+            width: 105px;
+            margin-left: 100px;
+            height: 88px;
+        }
+        
+        .li-name {
+            color: black;
+            font-size: 24px;
+            width: 80px;
+            padding-left: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            background-color: #888;
+            text-align: center;
+            font-weight: 400;
+        }
+        
+        .li-bar {
+            width: 1024px;
+            height: 50px;
+            display: flex;
+            margin-bottom: 5px;
+            margin-left: 100px;
+        }
+        
+        .my-nav {
+            width: 75%;
+            height: 50px;
+            display: flex;
+        }
+        
+        .li-btn {
+            float: right;
+            width: 152px;
+            height: 27px;
+            text-align: center;
+            line-height: 27px;
+            margin: 12px 80px 0 0;
+            background: url(http://www.lijian2015.com/images/go_blog_btn.gif) no-repeat center;
+            color: #7B2800;
+        }
+        
+        .my-nav>a {
+            display: block;
+            width: 40px;
+            color: #000;
+            bottom: 0px;
+            text-align: center;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        
+        .my-nav img {
+            display: block;
+            width: 50px;
+            height: 45px;
+            transition-duration: 0.2s;
+        }
+        
+        .my-nav img:hover {
+            display: block;
+            width: 55px;
+            height: 50px;
+            box-shadow: 1px 1px 18px #888;
+        }
+        
+        .li-page {
+            position: relative;
+            max-width: 1320px;
+            width: 60%;
+            height: 1010px;
+            margin: 0 0 40px 95px;
+            padding: 47px 0 30px 55px;
+            background: url(http://www.lijian2015.com/images/paper.jpg) repeat;
+            box-shadow: 1px 1px 18px #888;
+        }
+        
+        .bg- {
+            position: absolute;
+            width: 133px;
+            height: 172px;
+        }
+        
+        .a {
+            right: 0;
+            bottom: 0;
+            background: url(http://www.lijian2015.com/images/border_img_4.png) no-repeat;
+        }
+        
+        .b {
+            background: url(http://www.lijian2015.com/images/border_img_1.png) no-repeat;
+            left: 0;
+            top: 0;
+        }
+        
+        .c {
+            right: 0;
+            top: 0;
+            background: url(http://www.lijian2015.com/images/border_img_2.png) no-repeat;
+        }
+        
+        .d {
+            left: 0;
+            bottom: 0;
+            background: url(http://www.lijian2015.com/images/border_img_3.png) no-repeat;
+        }
+        
+        .li-footer {
+            width: 100%;
+            min-width: 1200px;
+            padding: 15px 0;
+            text-align: center;
+            border-top: 2px solid #ccc;
+            color: #666;
+        }
+        
+        .top {
+            position: fixed;
+            right: 20px;
+            bottom: 50px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background: url(http://www.lijian2015.com/images/top.gif) no-repeat 0 0;
+            cursor: pointer;
+        }
+        
+        .h3 {
+            line-height: 30px;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #1C5F8C;
+            text-shadow: 0px 0px 1px #666;
+        }
+        
+        .li-ok {
+            width: 100%;
+            max-width: 720px;
+            height: 970px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .box {
+            -webkit-border-radius: 5px;
+            position: absolute;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            background: #fff;
+            border: 1px solid #999;
+            display: inline-block;
+            width: 157px;
+            margin: 0 25px 10px 0;
+            padding: 5px;
+            box-shadow: 5px 5px 6px #888;
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+            transition: all .3s linear;
+            -moz-transition: all .3s linear;
+            -webkit-transition: all .3s linear;
+            -o-transition: all .3s linear;
+        }
+        
+        .box img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="li-bg">
+    <div class="li-header">
+        <div class="li-logo animated bounceInLeft" style="animation-delay: 0s;animation-duration: 1s;">
+            <div class="li-nav"></div>
+            <div class="li-name">liang</div>
+        </div>
+        <div class="li-bar">
+            <div class="my-nav animated bounceInLeft" style="animation-delay: 1s;animation-duration: 1s;">
+                <a class="li-1" href=""><img src="http://www.lijian2015.com/images/home.png" alt=""></a>
+                <a class="li-2" href=""><img src="http://www.lijian2015.com/images/portfolio.png" alt=""></a>
+                <a class="li-3" href=""><img src="http://www.lijian2015.com/images/history.png" alt=""></a>
+                <a class="li-4" href=""><img src="http://www.lijian2015.com/images/rss.png" alt=""></a>
+                <a class="li-5" href=""><img src="http://www.lijian2015.com/images/portfolio.png" alt=""></a>
+                <a class="li-6" href=""><img src="http://www.lijian2015.com/images/link.png" alt=""></a>
+            </div>
+            <a href="../素材/suishou.html" class="li-btn animated bounceInLeft" style="animation-delay: 1s;" target="_blank">我的博客</a>
+        </div>
+        <div class="li-page animated bounceInLeft" style="animation-delay: 1.5s;">
+            <h3 class="h3">我的作品</h3>
+            <ul class="li-ok">
+                <!-- 此处渲染项目 -->
+
+            </ul>
+            <div class="bg- a"></div>
+            <div class="bg- b"></div>
+            <div class="bg- c"></div>
+            <div class="bg- d"></div>
+        </div>
+        <div class="li-footer">Copyright © 2019 - 2020 liang2019.com 所有 豫ICP备110略略略号</div>
+        <div class="top" id="rtt" style="display: block;">
+            <a href="javascript:void(0);"></a>
+        </div>
+</body>
+<script>
+    var ul = document.querySelector('.li-ok');
+    // console.log(ul);
+    var arr = [{
+        src: "../素材/1.jpg",
+        name: "Both of us"
+    }, {
+        src: "../素材/2.jpg",
+        name: "Both of us"
+    }, {
+        src: "../素材/3.jpg",
+        name: "Both of us"
+    }, {
+        src: "../素材/4.jpg",
+        name: "Both of us"
+    }, {
+        src: "../素材/5.jpg",
+        name: "Both of us"
+    }, {
+        src: "../素材/6.jpg",
+        name: "Both of us"
+    }, {
+        src: "../素材/5.jpg",
+        name: "Both of us"
+    }, {
+        src: "../素材/4.jpg",
+        name: "Both of us"
+    }, {
+        src: "../素材/3.jpg",
+        name: "Both of us"
+    }, {
+        src: "../素材/2.jpg",
+        name: "Both of us"
+    }, {
+        src: "../素材/1.jpg",
+        name: "Both of us"
+    }, {
+        src: "../素材/2.jpg",
+        name: "Both of us"
+    }, {
+        src: "../素材/3.jpg",
+        name: "Both of us"
+    }, {
+        src: "../素材/4.jpg",
+        name: "Both of us"
+    }, {
+        src: "../素材/5.jpg",
+        name: "Both of us"
+    }]
+
+    var arrb = []
+
+    for (var i = 0; i < arr.length; i++) {
+        var div = document.createElement('div')
+        div.className = "box"
+        ul.append(div);
+
+
+
+
+
+        var img = document.createElement('img');
+        var span = document.createElement('span');
+        img.src = arr[i].src;
+        arr[i].dom = div
+        span.innerText = arr[i].name;
+        div.append(img);
+        div.append(span);
+
+    }
+
+    window.onload = function() {
+        for (var i = 0; i < arr.length; i++) {
+            var z = arrb[arrb.length - 1];
+            var ii = 0;
+            if (i >= 4) {
+
+                for (var j = 0; j < arrb.length; j++) {
+                    if (arrb[j].t <= z.t) {
+                        z = arrb[j]
+                        ii = j;
+                    }
+                }
+
+                arr[i].dom.style.top = 20 + z.t + "px"
+                arr[i].dom.style.left = z.l + "px"
+                arrb[ii] = {
+                    t: arr[i].dom.offsetTop + arr[i].dom.offsetHeight,
+                    l: arr[i].dom.offsetLeft
+                }
+            } else {
+                arr[i].dom.style.top = 80 + 0 + "px"
+                arr[i].dom.style.left = 80 + i * 40 + i * 157 + "px"
+                arrb.push({
+                    t: arr[i].dom.offsetTop + arr[i].dom.offsetHeight,
+                    l: arr[i].dom.offsetLeft
+                })
+            }
+            // console.log(arrb)
+
+        }
+    }
+</script>
+<script>
+</script>
+
+</html>

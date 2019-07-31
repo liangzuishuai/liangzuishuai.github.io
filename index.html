@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>个人主页</title>
+    <link rel="stylesheet" href="./js/animate.css">
+    <link rel="shortcut icon" href="https://i03picsos.sogoucdn.com/14bad6fad2494015" type="image/x-icon">
+    <style>
+        @media screen and (min-width: 480px) {
+            .nav {
+                width: 200px;
+                float: left;
+            }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: url(http://www.lijian2015.com/images/bg.jpg) center center;
+        }
+        
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        
+        .yi {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: url(http://www.lijian2015.com/images/page_1_bg.jpg) center center;
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+        
+        .header {
+            width: 100vw;
+            font-size: 0.4vw;
+            color: #fff;
+            height: 68px;
+            box-shadow: 0 0 10px #ccc;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            left: 0;
+            background: rgba(23, 106, 178, .5);
+            z-index: 100
+        }
+        
+        .nav {
+            width: 350px;
+            height: 68px;
+            float: right;
+            margin-right: 100px;
+        }
+        
+        .ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .ul>li {
+            font-size: 13px;
+            transition-duration: 0.6s;
+        }
+        
+        .ul>li:hover {
+            background-color: dodgerblue;
+        }
+        
+        .nav li {
+            height: 100%;
+            width: 25%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav li a {
+            width: 100px;
+            color: #fff;
+        }
+        
+        .bottom {
+            max-width: 1530px;
+            height: 500px;
+            margin: 0 auto;
+            width: 100%;
+            /* background-color: aquamarine; */
+        }
+        
+        .center {
+            width: 580px;
+            margin: 0 auto;
+            display: flex;
+            text-align: center;
+            padding-top: 120px;
+            flex-direction: column;
+            align-items: stretch;
+            position: relative;
+        }
+        
+        .img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        
+        .center>li {
+            margin-top: 18px;
+        }
+        
+        .center>li>a {
+            color: azure;
+        }
+        
+        .center>li:nth-child(2) {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
+        }
+        
+        .center>li:nth-child(1) {
+            z-index: 9;
+        }
+        
+        .center>li:last-child {
+            position: absolute;
+            top: 120px;
+            left: 215px;
+            display: block;
+            transition-duration: 0.6s;
+        }
+        
+        .xiao {
+            font-size: 13px;
+        }
+        
+        .li-jj {
+            width: 150px;
+            height: 60px;
+            /* background-color: aqua; */
+            margin-left: 60px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .li-jj>img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: block;
+        }
+        
+        .li-pd {
+            width: 60px;
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            height: 60px;
+            flex-direction: column;
+        }
+        
+        .li-pd>li {
+            width: 60px;
+            margin-top: 6px;
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="li-jj">
+            <img src="http://b350.photo.store.qq.com/psb?/V10n6wtk1j1ZH4/3W87BRytGzF5l8LzusiHB7xLQhhb8SzT5w*uDqxJ3Gg!/m/dF4BAAAAAAAA&rf=albumlist&t=5" alt="">
+            <div class="li-pd">
+                <li>liang</li>
+                <li style=" width: 60px;
+                height: 1px;
+                background-color: aliceblue;"></li>
+                <li>个人主页</li>
+            </div>
+        </div>
+        <div class="nav">
+            <ul class="ul">
+                <li>
+                    <a href="">
+                        <span>
+            首頁
+         </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./html/geren.html">
+                        <span>
+            个人信息
+         </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./html/zuopin.html">
+                        <span>
+            作品
+         </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./html/suishou.html">
+                        <span>
+            随手笔记
+         </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="yi">
+        <canvas></canvas>
+        <div class="bottom">
+            <div class="center">
+                <li class="animated bounceInLeft" style="animation-delay: 0.5s;animation-duration: 1s;">
+                    <a href=""><img class="img" src="http://b350.photo.store.qq.com/psb?/V10n6wtk1j1ZH4/3W87BRytGzF5l8LzusiHB7xLQhhb8SzT5w*uDqxJ3Gg!/m/dF4BAAAAAAAA&rf=albumlist&t=5" alt=""></a>
+                </li>
+                <li class="animated bounceInLeft" style="animation-delay: 1s;"><a href="">人生就是一道坡，只有不懈攀登，才能到达顶坡，实现自我的最高价值！</a></li>
+                <li class="animated bounceInLeft" style="animation-delay: 1.5s;"><a class="xiao" href="/">我叫李昂</a></li>
+                <li class="animated bounceInLeft" style="animation-delay: 2s;"><a class="xiao" href="/">22岁</a></li>
+                <li class="animated bounceInLeft" style="animation-delay: 2.5s;"><a class="xiao" href="/">前端开发工程师</a></li>
+                <li class="animated bounceInLeft" style="animation-delay: 3s;"><a class="xiao" href="/">手机：110</a></li>
+                <li class="animated bounceInLeft" style="animation-delay: 3.5s;"><a class="xiao" href="/">QQ：411298194</a></li>
+                <li class="animated bounceInLeft" style="animation-delay: 0.5s;">
+                    <a href=""><img class="img" src="" alt=""></a>
+                </li>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var w = document.body.clientWidth
+    var h = document.body.clientHeight;
+    var data = {
+        x: 0,
+        y: 0
+    }
+    var canvas = document.querySelector('canvas')
+        // console.log(canvas);
+    canvas.width = w;
+    canvas.height = h;
+    var ctx = canvas.getContext('2d');
+
+    var arr = [
+
+    ]
+    var mw = parseInt(w / 50),
+        mh = parseInt(h / 50);
+    var wg = 0,
+        hg = 0;
+
+    function dian(x, y, i) {
+        this.i = i;
+        this.x = x;
+        this.y = y;
+        this.t = 0;
+        this.s = "#fff0"
+        this.falg = true;
+        this.Falg = false;
+        this.time = sui(2000, 4000);
+        this.r = sui(1, 3);
+        this.end = {
+            x: 0,
+            y: 0
+        }
+        this.ing = {
+            x: 0,
+            y: 0
+        }
+        this.bu = {
+            x: 0,
+            y: 0,
+            bux: 0,
+            buy: 0
+        }
+        this.list = []
+        this.init();
+        this.huid();
+        this.qi();
+
+
+    }
+
+    dian.prototype = {
+        huix: function() {
+            // Math.sqrt(Math.pow(x,2)+Math.pow(y,2))
+            //     ctx.strokeStyle="rgba(255,255,255,"+0.1+")"
+            // ctx.stroke()
+            //判斷是否超出
+            var list = this.list
+            for (var i = 0; i < list.length; i++) {
+                var o = arr[list[i] * 1]
+                var x = Math.abs((this.ing.x + this.bu.bux) - o.ing.x + o.bu.bux)
+                var y = Math.abs((this.ing.y + this.bu.buy) - o.ing.y + o.bu.buy)
+                if (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)) < 50) {
+                    list.splice(i, 1);
+                    o = o.list.filter(x => x != this.i)
+                }
+            }
+            //判斷附近連接
+            for (var i = 0; i < arr.length; i++) {
+                if (list.length > 4) {
+                    break;
+                } else if (arr[i].list.length > 4 || list.indexOf(i) != -1 || arr[i].list.indexOf(this.i) != -1) {
+                    continue;
+                }
+                var x = this.ing.x + this.bu.bux - arr[i].ing.x + this.bu.bux
+                var y = this.ing.y + this.bu.buy - arr[i].ing.y + this.bu.buy
+                if (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)) < 50) {
+                    list.push(i);
+                }
+            }
+            //進行繪製
+            for (var i = 0; i < list.length; i++) {
+                var o = arr[list[i] * 1];
+                ctx.beginPath()
+                ctx.moveTo(this.ing.x + this.bu.bux - this.r / 2, this.ing.y + this.bu.buy - this.r / 2);
+                ctx.lineTo(arr[list[i] * 1].ing.x + arr[list[i] * 1].bu.bux - arr[list[i] * 1].r / 2, arr[list[i] * 1].ing.y + arr[list[i] * 1].bu.buy - arr[list[i] * 1].r / 2);
+                var x = Math.abs((this.ing.x + this.bu.bux) - data.x)
+                var y = Math.abs((this.ing.y + this.bu.buy) - data.y)
+                var x1 = Math.abs((arr[list[i] * 1].ing.x + arr[list[i] * 1].bu.bux) - data.x)
+                var y1 = Math.abs((arr[list[i] * 1].ing.y + arr[list[i] * 1].bu.buy) - data.y)
+
+
+                if ((Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)) < 150) && (Math.sqrt(Math.pow(x1, 2) + Math.pow(y1, 2)) < 150)) {
+                    this.s = "rgba(29, 115, 189, 0.5)"
+                    ctx.strokeStyle = this.s;
+                    ctx.stroke();
+                } else if ((Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)) < 200) && (Math.sqrt(Math.pow(x1, 2) + Math.pow(y1, 2)) < 200)) {
+                    this.s = "rgba(29, 115, 189, 0.2)"
+                    ctx.strokeStyle = this.s;
+                    ctx.stroke();
+                }
+
+            }
+
+
+
+        },
+        huid: function() {
+
+
+
+            if (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)) < 200) {
+                return;
+            }
+
+            ctx.beginPath()
+            this.t++;
+
+            if ((15 <= this.t) && (this.t < 25)) {
+                this.bu.bux += this.bu.x / 100 * 80 / 10;
+                this.bu.buy += this.bu.y / 100 * 80 / 10;
+            } else {
+                this.bu.bux += this.bu.x / 100 * 20 / 30;
+                this.bu.buy += this.bu.y / 100 * 20 / 30;
+            }
+
+
+            // this.bu.bux+=this.bu.x;
+            //      this.bu.buy+=this.bu.y;
+
+
+
+
+            if (this.t == 40) {
+                this.t = 0;
+                this.init()
+            }
+
+
+            ctx.arc(this.ing.x + this.bu.bux, this.ing.y + this.bu.buy, this.r, 0, 2 * Math.PI)
+
+            var x = Math.abs((this.ing.x + this.bu.bux) - data.x)
+            var y = Math.abs((this.ing.y + this.bu.buy) - data.y)
+            if (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)) < 150) {
+                this.s = "rgba(29, 115, 189, 1)"
+                ctx.fillStyle = this.s;
+                ctx.fill();
+            } else if (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)) < 230) {
+                this.s = "rgba(29, 115, 189, 0.5)"
+                ctx.fillStyle = this.s;
+                ctx.fill();
+            }
+
+
+
+        },
+        qi: function() {
+            var that = this;
+
+            setTimeout(function() {
+                that.Falg = true;
+            }, sui(0, 2000))
+        },
+        init: function() {
+            if (this.ing.x == 0 && this.ing.y == 0) {
+                this.ing = {
+                    x: sui(this.x - 50, this.x + 50),
+                    y: sui(this.y - 50, this.y + 50)
+                }
+            } else {
+                this.ing = this.end;
+            }
+
+            this.end = {
+                x: sui(this.x - 50, this.x + 50),
+                y: sui(this.y - 50, this.y + 50)
+            }
+
+
+            var x = this.end.x - this.ing.x;
+            var y = this.end.y - this.ing.y;
+
+            this.bu = {
+                x: (this.end.x - this.ing.x),
+                y: (this.end.y - this.ing.y),
+                bux: 0,
+                buy: 0
+            }
+
+        }
+
+
+    }
+
+    for (var i = 0; i < (mw * mh); i++) {
+
+        h
+        // console.log(Math.ceil(i%mw),parseInt(i/mw),mh)
+
+        arr.push(new dian(20 + (Math.ceil(i % mw) * 50), 20 + (parseInt(i / mw) * 50), i));
+
+    }
+
+
+
+    function sui(minNum, maxNum) {
+        switch (arguments.length) {
+            case 1:
+                return parseInt(Math.random() * minNum + 1, 10);
+                break;
+            case 2:
+                return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+                break;
+            default:
+                return 0;
+                break;
+        }
+    }
+    // console.log(arr)
+    //  ctx.arc(x,y,200,0,2*Math.PI)
+    // ctx.fillStyle="#fff"
+    // ctx.fill();
+    function huid() {
+
+    }
+
+
+
+
+
+    function huix() {
+
+    }
+
+
+
+
+
+    function clear() {
+
+
+
+
+    }
+
+
+
+
+
+
+    var time;
+
+    function ding() {
+        time = setInterval(function() {
+            ctx.beginPath()
+            ctx.clearRect(0, 0, 4000, 4000);
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i].Falg) {
+                    arr[i].huid();
+                }
+                arr[i].huix();
+            }
+        }, 50)
+    }
+    ding()
+
+    // window.onclick = function() {
+    //     clearInterval(time)
+    // }
+    window.onmousemove = function(e) {
+        data = {
+                x: e.screenX,
+                y: e.screenY - 71
+            }
+            // console.log(data)
+    }
+</script>
+
+</html>

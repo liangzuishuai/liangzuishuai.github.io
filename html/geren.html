@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人信息</title>
+    <link rel="stylesheet" href="../js/animate.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        .lis-header {
+            max-width: 1320px;
+            width: 100%;
+            margin: 0 auto;
+            height: 600px;
+            /* background-color: aquamarine; */
+        }
+        
+        .lis-ul {
+            width: 100%;
+            height: 600px;
+            padding-top: 100px;
+        }
+        
+        .lis-ul>li {
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .lis-ul>li:nth-child(2) {
+            width: 150px;
+            height: 3px;
+            background-color: red;
+            margin-top: 5px;
+        }
+        
+        .lis-ul>li:nth-child(3) {
+            font-size: 12px;
+            color: red;
+            margin-top: 5px;
+        }
+        
+        .lis-ul>li:nth-child(4) {
+            font-size: 12px;
+            color: black;
+            width: 998px;
+            margin-top: 20px;
+        }
+        
+        .h3s {
+            font-size: 22px;
+        }
+        
+        .li-ss {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        
+        .ps {
+            line-height: 32px;
+        }
+        
+        .li-sp {
+            width: 100%;
+            height: 20px;
+            text-align: left;
+            padding-left: 10px;
+        }
+        
+        .li-s {
+            background-image: url(http://www.lijian2015.com/images/skill_flag.png);
+            background-repeat: no-repeat;
+            width: 35px;
+            height: 20px;
+            margin: 20px auto;
+        }
+        
+        .header {
+            width: 100vw;
+            font-size: 0.4vw;
+            color: #fff;
+            height: 68px;
+            box-shadow: 0 0 10px #ccc;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            left: 0;
+            background: rgba(23, 106, 178, .5);
+            z-index: 100
+        }
+        
+        .nav {
+            width: 350px;
+            height: 68px;
+            float: right;
+            margin-right: 100px;
+        }
+        
+        .ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .ul>li {
+            font-size: 13px;
+            transition-duration: 0.6s;
+        }
+        
+        .ul>li:hover {
+            background-color: dodgerblue;
+        }
+        
+        .nav li {
+            height: 100%;
+            width: 25%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav li a {
+            width: 100px;
+            color: #fff;
+        }
+        
+        .li-jj {
+            width: 150px;
+            height: 60px;
+            /* background-color: aqua; */
+            margin-left: 60px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .li-jj>img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: block;
+        }
+        
+        .li-pd {
+            width: 60px;
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            height: 60px;
+            flex-direction: column;
+        }
+        
+        .li-pd>li {
+            width: 60px;
+            margin-top: 6px;
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="li-jj">
+            <img src="http://b350.photo.store.qq.com/psb?/V10n6wtk1j1ZH4/3W87BRytGzF5l8LzusiHB7xLQhhb8SzT5w*uDqxJ3Gg!/m/dF4BAAAAAAAA&rf=albumlist&t=5" alt="">
+            <div class="li-pd">
+                <li>liang</li>
+                <li style=" width: 60px;
+                        height: 1px;
+                        background-color: aliceblue;"></li>
+                <li>个人主页</li>
+            </div>
+        </div>
+        <div class="nav">
+            <ul class="ul">
+                <li>
+                    <a href="../index.html">
+                        <span>
+                    首頁
+                 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./geren.html">
+                        <span>
+                    个人信息
+                 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./zuopin.html">
+                        <span>
+                    作品
+                 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./suishou.html">
+                        <span>
+                    随手笔记
+                 </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="lis-header">
+        <ul class="lis-ul">
+            <li class="animated bounceInLeft">
+                <h3 class="h3s">专业技能</h3>
+            </li>
+            <li class="animated bounceInLeft"></li>
+            <li class="animated bounceInLeft">- SKILL -</li>
+            <li class="animated bounceInLeft" style="animation-delay: 1s;animation-duration: 1s;">
+                <p class="ps">IT技术的学习需要持之以恒，对知识的认识深度与广度都很重要。对于前端而言更是如此，近几年前端框架层出不穷，前端技术已经从单纯的静态页面开发慢慢转变成mvc、mvvc等架构型开发，前端工程师正在渐渐向全栈工程师转变，前端开发的重中之重依然是javascript脚本的理解与应用，目前正在不断深入学习javascript知识。</p>
+            </li>
+            <li class="animated bounceIn" style="animation-delay: 2.2s;animation-duration: 1s;">
+                <ul class="li-ss">
+                    <li><img src="http://www.lijian2015.com/images/html.png" alt="">
+                        <div class="li-sp">HTML</div>
+                        <div class="li-s"></div>
+                    </li>
+                    <li><img src="http://www.lijian2015.com/images/html.png" alt="">
+                        <div class="li-sp">CSS</div>
+                        <div class="li-s"></div>
+                    </li>
+                    <li><img src="http://www.lijian2015.com/images/html.png" alt="">
+                        <div class="li-sp">JavaScript</div>
+                        <div class="li-s"></div>
+                    </li>
+                    <li><img src="http://www.lijian2015.com/images/html.png" alt="">
+                        <div class="li-sp">Vue</div>
+                        <div class="li-s"></div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

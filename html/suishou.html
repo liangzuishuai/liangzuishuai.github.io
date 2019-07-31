@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../js/style.css">
+    <title>我的博客</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        body {
+            background: url(http://blog.lijian2015.com/css/images/ui_bg.png) repeat;
+            font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        .tou {
+            width: 100%;
+            height: 301px;
+            background-size: 520px;
+            background-image: url(http://blog.lijian2015.com/css/images/banner.jpg);
+            background-position: center;
+        }
+        
+        .tou-c {
+            max-width: 1320px;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+        
+        .nav {
+            width: 100%;
+            height: 60px;
+            padding: 5px 5px;
+            line-height: 60px;
+        }
+        
+        .navl {
+            float: left;
+            width: 335px;
+            /* margin-left: 20px; */
+            height: 60px;
+        }
+        
+        .navl a {
+            display: inline-block;
+            width: 80px;
+            height: 100%;
+            color: #8e8e8e;
+            font-size: 14px;
+            text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition-duration: 0.4s;
+        }
+        
+        .navl a:hover {
+            color: aliceblue;
+        }
+        
+        .center {
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .center span {
+            padding: 5px 8px;
+            font-size: 38px;
+            line-height: 40px;
+            letter-spacing: 2px;
+            background: #f00;
+            border-radius: 5px;
+            color: #fff
+        }
+        
+        .bodyter {
+            max-width: 1260px;
+            width: 100%;
+            margin: 10px auto;
+            height: 100%;
+            display: flex;
+        }
+        
+        .neileft {
+            float: left;
+            width: 900px;
+            height: 1800px;
+            padding: 20px;
+            background: white;
+        }
+        
+        .neiright {
+            float: left;
+            width: 280px;
+            height: 500px;
+            background: white;
+            margin-left: 20px;
+        }
+        
+        .article-title {
+            color: black;
+        }
+        
+        .headerlink {
+            line-height: 1.6em;
+            margin: 1.6em 0;
+        }
+        
+        .li-nei {
+            text-indent: 40px;
+            margin-top: 30px;
+        }
+        
+        .widget-wrap {
+            margin: 0 auto;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            border-radius: 3px;
+        }
+        
+        .widget-title {
+            padding: 8px 0;
+            margin-bottom: 15px;
+            text-align: center;
+            border-bottom: 1px dotted #ccc;
+            color: #979797;
+            font-size: 1.2em;
+            text-shadow: 0 1px #fff;
+        }
+        
+        .widget {
+            line-height: 1.6em;
+            word-wrap: break-word;
+            font-size: 0.9em;
+        }
+        
+        .category-list-link {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tou">
+
+        <div class="tou-c">
+            <div class="nav">
+                <div class="navl">
+                    <a href="../index.html"><span>主页</span></a>
+                    <a href="javascript:;"><span>文章归档</span></a>
+                    <a href="javascript:;"><span>前端工具</span></a>
+                    <a href="../index.html"><span>关于我</span></a>
+                </div>
+
+            </div>
+            <div class="center">
+                <span>liang的前端博客</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="bodyter">
+        <div class="neileft">
+            <section id="main">
+                <article id="post-a-8" class="article article-type-post" itemscope="" itemprop="blogPost">
+                    <div class="article-inner">
+                        <header class="article-header">
+                            <h1 itemprop="name">
+                                <a class="article-title" href="/a-8/">提高你css技能的css开发技巧</a>
+                            </h1>
+                        </header>
+                        <div class="article-entry" itemprop="articleBody">
+                            <h2 id="前言">
+                                <a href="#前言" class="headerlink" title="前言"></a>前言</h2>
+                            <p>说到css开发技巧，其实我前面所有关于css的文章，都是css的一些小的技巧！ 还有值得一提的是，我之前关于css，分别写了css常用效果总结 ，还有一些 css的不常用效果总结，其实呢，这些都是相对的。有些效果我们在开发中不常用，但是有的项目也可能会用到！例如，最近做了一个小的项目，用到了css的resize属性。其实我本来不想用这个属性的，因为这个属性不兼容IE浏览器，但是呢，我这个项目却恰恰不需要兼容IE，是内部系统！那我先以resize属性介绍，作为本文的开头吧，虽然resize应用算不上css开发技巧！</p>
+                            <h3 id="一、resize实现图片对比">
+                                <a href="#一、resize实现图片对比" class="headerlink" title="一、resize实现图片对比"></a>一、resize实现图片对比</h3>
+
+                            <p class="article-more-link">
+                                <a href="/a-8/#more">阅读全文</a>
+                            </p>
+                        </div>
+                        <footer class="article-footer">
+                            <a data-url="blog.lijian2015.com/a-8/" data-id="cjvm5yig30006p8w6emokxspf" class="article-share-link">Share</a>
+                            <ul class="article-tag-list">
+                                <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li>
+                                <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css技巧/">css技巧</a></li>
+                            </ul>
+                        </footer>
+                    </div>
+                </article>
+                <article id="post-a-7" class="article article-type-post" itemscope="" itemprop="blogPost">
+                    <div class="article-inner">
+                        <header class="article-header">
+                            <h1 itemprop="name">
+                                <a class="article-title" href="/a-7/">利用空白gif图片，实现数据上报，数据埋点</a>
+                            </h1>
+                        </header>
+                        <div class="article-entry" itemprop="articleBody">
+
+                            <h3 id="前言">
+                                <a href="#前言" class="headerlink" title="前言"></a>前言</h3>
+                            <p>利用空白gif图片，实现数据上报，数据埋点。开发中经常需要统计页面点击，曝光，包括一些数据埋点。当然，埋点数据上报的方式有很多，下面介绍纯css的方式和一句话js方式。<br>&nbsp;</p>
+                            <h3 id="纯css方式">
+                                <a href="#纯css方式" class="headerlink" title="纯css方式"></a>纯css方式</h3>
+                            <p>纯css方式实现数据上报很简单。原理就是利用css属性，但是弊端也比较明显，就是点击只能加载一次。例如如下代码，实现跟踪botton1和botton2的点击事件<br></p>
+
+                            <p class="article-more-link">
+                                <a href="/a-7/#more">阅读全文</a>
+                            </p>
+                        </div>
+                        <footer class="article-footer">
+                            <a data-url="blog.lijian2015.com/a-7/" data-id="cjvm5yify0002p8w6ju22jcfz" class="article-share-link">Share</a>
+                            <ul class="article-tag-list">
+                                <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li>
+                                <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/埋点/">埋点</a></li>
+                                <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据/">数据</a></li>
+                            </ul>
+                        </footer>
+                    </div>
+                </article>
+                <article id="post-a_1" class="article article-type-post" itemscope="" itemprop="blogPost">
+                    <div class="article-inner">
+                        <header class="article-header">
+                            <h1 itemprop="name">
+                                <a class="article-title" href="/a_1/">Javascript基本概念梳理</a>
+                            </h1>
+                        </header>
+                        <div class="article-entry" itemprop="articleBody">
+                            <p><strong>javascript里的数据类型：</strong></p>
+                            <blockquote>
+                                <p>原始类型：数字，字符串，布尔值。（原始值：null，undefined）</p>
+                            </blockquote>
+                            <p>对象类型：键值对，数组，function，全局对象（MATH，JSON）</p>
+                            <p>保留字：export，NaA。。<br>&nbsp; </p>
+                            <p><strong>包装对象的概念：</strong></p>
+                            <blockquote>
+                                <p>字符串”aaa”.len 字符串并不是对象，但是却可以调用它的属性，说明这只是一个临时对象，内部用new String（）来创建的临时的。</p>
+                            </blockquote>
+                            <p>原始类型是永远不可变的，所以可以比较他们的值，但是对象类型是可变的，不能比较他们的值.<br>&nbsp;<br></p>
+
+                            <p class="article-more-link">
+                                <a href="/a_1/#more">阅读全文</a>
+                            </p>
+                        </div>
+                        <footer class="article-footer">
+                            <a data-url="blog.lijian2015.com/a_1/" data-id="cjvm5yift0000p8w63poaf369" class="article-share-link">Share</a>
+                            <ul class="article-tag-list">
+                                <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li>
+                                <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/表单验证/">表单验证</a></li>
+                                <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/表格/">表格</a></li>
+                            </ul>
+                        </footer>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <div class="neiright">
+            <div class="widget-wrap">
+                <h3 class="widget-title">分类</h3>
+                <div class="widget">
+                    <ul class="category-list">
+                        <li class="category-list-item"><a class="category-list-link" href="/categories/web前端/">web前端</a><span class="category-list-count">1</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+</script>
+
+</html>
